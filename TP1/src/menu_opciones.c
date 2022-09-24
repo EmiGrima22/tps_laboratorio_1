@@ -23,28 +23,28 @@ int IngresarCosto()
 	return opcion;
 }
 
-void IngresarMantenimiento(int opcion, int * acumUno, int * acumDos, int * acumTres)
+void IngresarMantenimiento(int opcionMantenimiento, int * acumuladorHospedaje, int * acumuladorComida, int * acumuladorTransporte)
 {
-	switch (opcion)
+	switch (opcionMantenimiento)
 	{
 		case 1:
-			*acumUno += IngresarCosto();
+			*acumuladorHospedaje += IngresarCosto();
 			break;
 		case 2:
-			*acumDos += IngresarCosto();
+			*acumuladorComida += IngresarCosto();
 			break;
 		case 3:
-			*acumTres += IngresarCosto();
+			*acumuladorTransporte += IngresarCosto();
 			break;
 	}
 }
 
-void InformarResultados(float porcentajeUno,float porcentajeDos,float porcentajeTres,float porcentajeCuatro,float porcentajeCinco,float porcentajeSeis)
+void InformarResultados(float porcentajeUefa,float porcentajeConmebol,float porcentajeConcacaf,float porcentajeAfc,float porcentajeOfc,float porcentajeCaf)
 {
-	printf("\n            Informar todos los resultados               \n\nPorcentaje Uefa %.2f\nPorcentaje Conmebol %.2f\nPorcentaje Concacaf %.2f\nPorcentaje Afc %.2f\nPorcentaje Ofc %.2f\nPorcentaje Caf %.2f\n",porcentajeUno,porcentajeDos,porcentajeTres,porcentajeCuatro,porcentajeCinco,porcentajeSeis);
+	printf("\n            Informar todos los resultados               \n\nPorcentaje Uefa %.2f\nPorcentaje Conmebol %.2f\nPorcentaje Concacaf %.2f\nPorcentaje Afc %.2f\nPorcentaje Ofc %.2f\nPorcentaje Caf %.2f\n",porcentajeUefa,porcentajeConmebol,porcentajeConcacaf,porcentajeAfc,porcentajeOfc,porcentajeCaf);
 }
 
-void InformarTotalMantenimiento(int mantenimiento, int aumento, int total)
+void InformarTotalMantenimiento(int totalMantenimiento, int valorDeAumento, int totalConAumento)
 {
-	printf("El costo de mantenimiento era de $%d y recibio un aumento de $%d, su nuevo valor es de: $%d\n",mantenimiento,aumento,total);
+	printf("El costo de mantenimiento era de $%d y recibio un aumento de $%d, su nuevo valor es de: $%d\n",totalMantenimiento,valorDeAumento,totalConAumento);
 }

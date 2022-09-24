@@ -6,54 +6,54 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-void ContarPosiciones(int posicion, int * contadorPosicionUno, int * contadorPosicionDos, int * contadorPosicionTres, int * contadorPosicionCuatro)
+void ContarPosiciones(int opcionPosicion, int * contadorArquero, int * contadorDefensa, int * contadorMediocampista, int * contadorDelantero)
 {
-	switch (posicion)
+	switch (opcionPosicion)
 	{
 		case 1:
-			*contadorPosicionUno += 1;
+			*contadorArquero += 1;
 			break;
 		case 2:
-			*contadorPosicionDos += 1;
+			*contadorDefensa += 1;
 			break;
 		case 3:
-			*contadorPosicionTres += 1;
+			*contadorMediocampista += 1;
 			break;
 		case 4:
-			*contadorPosicionCuatro += 1;
+			*contadorDelantero += 1;
 			break;
 	}
 }
 
-void ContarConfederaciones(int confederacion,int *confeUno, int *confeDos, int *confeTres,int *confeCuatro, int *confeCinco, int *confeSeis)
+void ContarConfederaciones(int opcionConfederacion,int *contadorAfc, int *contadorCaf, int *contadorConcacaf,int *contadorConmebol, int *contadorUefa, int *contadorOfc)
 {
-	switch (confederacion)
+	switch (opcionConfederacion)
 	{
 		case 1:
-			*confeUno += 1;
+			*contadorAfc += 1;
 			break;
 		case 2:
-			*confeDos += 1;
+			*contadorCaf += 1;
 			break;
 		case 3:
-			*confeTres += 1;
+			*contadorConcacaf += 1;
 			break;
 		case 4:
-			*confeCuatro += 1;
+			*contadorConmebol += 1;
 			break;
 		case 5:
-			*confeCinco += 1;
+			*contadorUefa += 1;
 			break;
 		case 6:
-			*confeSeis += 1;
+			*contadorOfc += 1;
 			break;
 	}
 }
 
-float CalcularPromedio(int contadorConfe, int jugadoresTotales)
+float CalcularPromedio(int contadorDeLaConfederacion, int contadorJugadoresTotales)
 {
 	float resultado;
-	resultado = (float)(contadorConfe * 100) / jugadoresTotales;
+	resultado = (float)(contadorDeLaConfederacion * 100) / contadorJugadoresTotales;
 	return resultado;
 }
 
@@ -64,12 +64,12 @@ int CalcularTotal(int hospedaje ,int comida, int transporte)
 	return resultado;
 }
 
-int CalcularAumentoTotal(int total, int porcentaje, int * aumento)
+int CalcularAumentoTotal(int sumaMantenimientoTotal, int porcentajeAumento, int * totalConAumento)
 {
-	int totalConAumento;
+	int resultado;
 
-	*aumento = (total * porcentaje) / 100;
-	totalConAumento = total + *aumento;
+	*totalConAumento = (sumaMantenimientoTotal * porcentajeAumento) / 100;
+	resultado = sumaMantenimientoTotal + *totalConAumento;
 
-	return totalConAumento;
+	return resultado;
 }

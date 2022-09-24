@@ -27,26 +27,26 @@ int IngresarCosto();
 
 /// @brief Segun la opcion seleccionada se acumulan los costos de mantenimiento de esa opcion
 ///
-/// @param opcion: Valor de la opcion a cargar
-/// @param acumUno: Valor del acumulador de uno de los costos de mantenimiento
-/// @param acumDos: Valor del acumulador de uno de los costos de mantenimiento
-/// @param acumTres: Valor del acumulador de uno de los costos de mantenimiento
-void IngresarMantenimiento(int opcion, int * acumUno, int * acumDos, int * acumTres);
+/// @param opcionMantenimiento: Valor de la opcion a cargar
+/// @param acumuladorHospedaje: Valor del acumulador de hospedaje en tiempo real
+/// @param acumuladorComida: Valor del acumulador de comida en tiempo real
+/// @param acumuladorTransporte: Valor del acumulador de transporte en tiempo real
+void IngresarMantenimiento(int opcionMantenimiento, int * acumuladorHospedaje, int * acumuladorComida, int * acumuladorTransporte);
 
-/// @brief Informa los valores de los porcentajes de cada confederacion
+/// @brief Informa el resultado total de los porcentajes de los jugadores seleccionados de cada confederacion
 ///
-/// @param porcentajeUno: Valor del porcentaje de una de las confederaciones
-/// @param porcentajeDos: Valor del porcentaje de una de las confederaciones
-/// @param porcentajeTres: Valor del porcentaje de una de las confederaciones
-/// @param porcentajeCuatro: Valor del porcentaje de una de las confederaciones
-/// @param porcentajeCinco: Valor del porcentaje de una de las confederaciones
-/// @param porcentajeSeis: Valor del porcentaje de una de las confederaciones
-void InformarResultados(float porcentajeUno,float porcentajeDos,float porcentajeTres,float porcentajeCuatro,float porcentajeCinco,float porcentajeSeis);
+/// @param porcentajeUefa: Indica el porcentaje de jugadores de UEFA
+/// @param porcentajeConmebol: Indica el porcentaje de jugadores de Conmebol
+/// @param porcentajeConcacaf: Indica el porcentaje de jugadores de Concacaf
+/// @param porcentajeAfc: Indica el porcentaje de jugadores de Afc
+/// @param porcentajeOfc: Indica el porcentaje de jugadores de Ofc
+/// @param porcentajeCaf: Indica el porcentaje de jugadores de Caf
+void InformarResultados(float porcentajeUefa,float porcentajeConmebol,float porcentajeConcacaf,float porcentajeAfc,float porcentajeOfc,float porcentajeCaf);
 
-/// @brief Informa el valor total del mantenimiento sin aumento, el aumento que va a aplicar y el total con el aumento aplicado
+/// @brief Informa el valor total del mantenimiento sin aplicar aumento, el aumento que va a aplicar y el total con el aumento aplicado
 ///
-/// @param mantenimiento: valor del mantenimiento total
-/// @param aumento: valor del aumento
-/// @param total: valor del aumento aplicado al mantenimiento total
-void InformarTotalMantenimiento(int mantenimiento, int aumento, int total);
+/// @param totalMantenimiento: valor del mantenimiento total
+/// @param valorDeAumento: valor del aumento
+/// @param totalConAumento: valor total con aumento incluido
+void InformarTotalMantenimiento(int totalMantenimiento, int valorDeAumento, int totalConAumento);
 #endif /* MENU_OPCIONES_H_ */

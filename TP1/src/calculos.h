@@ -8,34 +8,34 @@
 #ifndef CALCULOS_H_
 #define CALCULOS_H_
 
-/// @brief Cuenta en tiempo real las posiciones ingresadas hasta el momento
+/// @brief Cuenta las posiciones elegidas en tiempo real
 ///
-/// @param posicion: Valor de la posicion a ingresar
-/// @param contadorPosicionUno: Valor del contador de una de las posiciones
-/// @param contadorPosicionDos: Valor del contador de una de las posiciones
-/// @param contadorPosicionTres: Valor del contador de una de las posiciones
-/// @param contadorPosicionCuatro: Valor del contador de una de las posiciones
-void ContarPosiciones(int posicion, int * contadorPosicionUno, int * contadorPosicionDos, int * contadorPosicionTres, int * contadorPosicionCuatro);
+/// @param opcionPosicion: Opcion de la posicion a cargar
+/// @param contadorArquero: Lleva la cuenta de los arqueros ingresados
+/// @param contadorDefensa: Lleva la cuenta de los defensas ingresados
+/// @param contadorMediocampista: Lleva la cuenta de los mediocampistas ingresados
+/// @param contadorDelantero: Lleva la cuenta de los delanteros ingresados
+void ContarPosiciones(int opcionPosicion, int * contadorArquero, int * contadorDefensa, int * contadorMediocampista, int * contadorDelantero);
 
 /// @brief Cuenta las confederaciones que se van eligiendo hasta el momento
 ///
-/// @param confederacion: Valor de opcion de la confederacion elegida
-/// @param confeUno: Valor del contador de una de las confederaciones
-/// @param confeDos: Valor del contador de una de las confederaciones
-/// @param confeTres: Valor del contador de una de las confederaciones
-/// @param confeCuatro: Valor del contador de una de las confederaciones
-/// @param confeCinco: Valor del contador de una de las confederaciones
-/// @param confeSeis:  Valor del contador de una de las confederaciones
-void ContarConfederaciones(int confederacion,int *confeUno, int *confeDos, int *confeTres,int *confeCuatro, int *confeCinco, int *confeSeis);
+/// @param opcionConfederacion: Opcion de la conferecion a elegir
+/// @param contadorAfc: Lleva la cuenta de los jugadores de confederacion AFC
+/// @param contadorCaf: Lleva la cuenta de los jugadores de confederacion CAF
+/// @param contadorConcacaf: Lleva la cuenta de los jugadores de confederacion CONCACAF
+/// @param contadorConmebol: Lleva la cuenta de los jugadores de confederacion CONMEBOL
+/// @param contadorUefa: Lleva la cuenta de los jugadores de confederacion UEFA
+/// @param contadorOfc:  Lleva la cuenta de los jugadores de confederacion OFC
+void ContarConfederaciones(int opcionConfederacion,int *contadorAfc, int *contadorCaf, int *contadorConcacaf,int *contadorConmebol, int *contadorUefa, int *contadorOfc);
 
 /// @brief Calcula el promedio y lo retorna
 ///
-/// @param contadorConfe: Valor total del contador de confederaciones
-/// @param jugadoresTotales: Valor total del contador de jugadores cargados
+/// @param contadorDeLaConfederacion: Valor total del contador de confederaciones
+/// @param contadorJugadoresTotales: Valor total del contador de jugadores cargados
 /// @return Retorna el promedio
-float CalcularPromedio(int contadorConfe, int jugadoresTotales);
+float CalcularPromedio(int contadorDeLaConfederacion, int contadorJugadoresTotales);
 
-/// @brief Calcula la suma total del hospedaje, comida y transporte. Retorna el resultado total
+/// @brief Calcula la suma total de los gastos de mantenimiento: hospedaje, comida y transporte. Retorna el resultado total
 ///
 /// @param hospedaje: Valor del acumulador total de hospedaje
 /// @param comida: Valor del acumulador total de comida
@@ -45,9 +45,9 @@ int CalcularTotal(int hospedaje ,int comida, int transporte);
 
 /// @brief Calcula el valor de aumento segun el porcentaje y el total con el aumento aplicado. Retorna el valor total con aumento aplicado
 ///
-/// @param total: El valor total de lo que deseo sacar el aumento
-/// @param porcentaje: El valor del porcentaje a aplicar
-/// @param aumento: El valor con el porcentaje aplicado
+/// @param sumaMantenimientoTotal: La suma de los tres acumuladores hospedaje,comida y transporte
+/// @param porcentajeAumento: El valor del porcentaje a aplicar
+/// @param totalConAumento: El valor final con el aumento aplicado
 /// @return Retorna el valor total con el porcentaje aplicado
-int CalcularAumentoTotal(int total, int porcentaje, int * aumento);
+int CalcularAumentoTotal(int sumaMantenimientoTotal, int porcentajeAumento, int * totalConAumento);
 #endif /* CALCULOS_H_ */
