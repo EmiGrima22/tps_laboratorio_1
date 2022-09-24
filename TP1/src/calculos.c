@@ -1,9 +1,3 @@
-/*
- * calculos.c
- *
- *  Created on: 21 sep. 2022
- *      Author: Emy
- */
 #include <stdio.h>
 #include <stdlib.h>
 void ContarPosiciones(int opcionPosicion, int * contadorArquero, int * contadorDefensa, int * contadorMediocampista, int * contadorDelantero)

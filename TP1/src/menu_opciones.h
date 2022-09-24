@@ -1,10 +1,3 @@
-/*
- * menu_opciones.h
- *
- *  Created on: 21 sep. 2022
- *      Author: Emy
- */
-
 #ifndef MENU_OPCIONES_H_
 #define MENU_OPCIONES_H_
 

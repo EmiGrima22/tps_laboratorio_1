@@ -1,10 +1,3 @@
-/*
- * calculos.h
- *
- *  Created on: 21 sep. 2022
- *      Author: Emy
- */
-
 #ifndef CALCULOS_H_
 #define CALCULOS_H_
 

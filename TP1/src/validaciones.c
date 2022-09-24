@@ -1,9 +1,3 @@
-/*
- * validaciones.c
- *
- *  Created on: 20 sep. 2022
- *      Author: Emy
- */
 #include <stdio.h>
 #include <stdlib.h>
 

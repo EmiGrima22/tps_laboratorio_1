@@ -1,10 +1,3 @@
-/*
- * validaciones.h
- *
- *  Created on: 20 sep. 2022
- *      Author: Emy
- */
-
 #ifndef VALIDACIONES_H_
 #define VALIDACIONES_H_
 
